@@ -1,0 +1,13 @@
+extend: {
+    colors: {
+      brightColor: "#F4511F",
+      backgroundColor: "#b7bca9",
+      lightText: "#959595",
+    },
+  },
+
+
+ Explore the world of food-simple, delicious, and worth knowing. 
+ From everyday ingredients to cullinary secrets, 
+ discover how food connects cultures, traditions, 
+ and people across the globe.
