@@ -7,7 +7,7 @@ function Meal_Area() {
     <div className='flex flex-col gap-[40px]'>
       <Nav/>
       <Area/>
-      <div>
+      <div className='mt-[350px]'>
         <End/>
       </div>
     </div>
