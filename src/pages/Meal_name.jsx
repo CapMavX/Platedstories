@@ -12,7 +12,7 @@ function Meal_name() {
         <Nav/> 
         </div> 
         <Name/>
-        <div className=' mt-[350px]'>
+        <div className=' mt-[320px]'>
           <End/>
         </div>
     

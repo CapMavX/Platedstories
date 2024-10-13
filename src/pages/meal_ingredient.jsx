@@ -11,7 +11,7 @@ function Meal_ingredient() {
         <Nav/>
       
       <Ingredient/>
-      <div className=' mt-[350px]'>
+      <div className=' mt-[320px]'>
           <End/>
         </div>
     </div>

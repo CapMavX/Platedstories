@@ -34,7 +34,7 @@ const closeMenu =() => {
             <ul className='hidden md:flex flex-row items-center text-lg font-medium gap-8'>
                 <li className='hover:text-brightColor transition-all cursor-pointer'><a href="/meal_name">Meals by name</a></li>
                 <li className='hover:text-brightColor transition-all cursor-pointer'><a href="/meal_ingredient">Meals by ingredient</a></li>
-                <li className='hover:text-brightColor transition-all cursor-pointer'><a href="/meal_area">Meals by area</a></li>
+                <li className='hover:text-brightColor transition-all cursor-pointer'><a href="/meal_letter">Meals by Alphabet</a></li>
             </ul>
             <div className='md:hidden flex items-center'>
                         {menu ? 
@@ -48,7 +48,7 @@ const closeMenu =() => {
         <div className={`${menu ? "translate-x-0": "-translate-x-full"} z-20 lg:hidden flex flex-col  bg-black text-white left-0 top-20 absolute w-full h-fit font-semibold text-2xl text-center pt-8 pb-4 gap-8 transition-transform duration-300 rounded-lg absolute `}>
         <li className='hover:text-brightColor transition-all cursor-pointer text-[18px]'><a href="/meal_name">Meals by name</a></li>
                 <li className='hover:text-brightColor transition-all cursor-pointer text-[18px]'><a href="/meal_ingredient">Meals by ingredient</a></li>
-                <li className='hover:text-brightColor transition-all cursor-pointer text-[18px]'><a href="/meal_alphabet">Meals by alphabet</a></li>
+                <li className='hover:text-brightColor transition-all cursor-pointer text-[18px]'><a href="/meal_letter">Meals by Alphabet</a></li>
                 </div>
         </div>
 

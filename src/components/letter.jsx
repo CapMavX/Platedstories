@@ -4,16 +4,17 @@ import {FaSearch} from 'react-icons/fa';
 
 
 
-function Area() {
+function Letter() {
     const[meals, setMeals] =useState([]);
     const[searchitem, setSearchitem] = useState('')
 
-    const fetchmeals = async () => {
+    const fetchmeals = async (letter) => {
             
-        const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${searchitem}`);
+        const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
         const data = await res.json();
+        console.log(data);
         setMeals(data.meals || []);
-        console.log(data)
+       
         
         
        
@@ -21,15 +22,12 @@ function Area() {
 
     
     const userinput = (e) => {
-        setSearchitem(e.target.value);
+        const letter = e.target.textContent;
+        setSearchitem(letter);
+        fetchmeals(letter);
     };
 
-    const Key = (e) => {
-        if(e.key === 'Enter'){
-            fetchmeals();
-        }
-    }
-
+    
     const number = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nobis exercitationem aliquam? Expedita praesentium assumenda, ullam repellendus id doloremque quasi quaerat dolorum, eveniet recusandae dolore sequi, tempore reprehenderit? Accusantium, accusamus.";
 
 
@@ -42,12 +40,11 @@ function Area() {
   return (
     <div className=' flex flex-col justify-center items-center lg:px-32 px-16' >
         
-       <div className='w-full relative ml-[50px] mr-[50px] '>
-        <input type="search" value={searchitem} onChange={userinput}  placeholder='Search meal by area' onKeyPress={Key} className=' bg-gray-300  pl-10 pr-4 py-2 w-full   border-none rounded-lg focus:outline-none  ' />
-        <div className='absolute left-3 top-1/2 transform -translate-y-1/2'>
-            <FaSearch className='text-[grey]'/>
-        </div>
-</div>
+      <div className='flex gap-3'>
+        {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter) => (
+            <button key={letter} onClick={userinput}>{letter}</button>
+        ))}
+      </div>
 
 <div className=' flex flex-col justify-center items-center lg:px-32 px-5 mt-[10px] '>
     {meals && meals.length > 0 ? (
@@ -78,4 +75,4 @@ function Area() {
   )
 }
 
-export default Area
+export default Letter

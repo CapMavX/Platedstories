@@ -8,7 +8,7 @@ import End from '../components/end'
 function Meals() {
   return (
  
-    <div className='flex flex-col gap-[625px]'>
+    <div className='flex flex-col gap-[560px]'>
     <div>
       <Nav/>
      

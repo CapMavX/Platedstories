@@ -5,7 +5,7 @@ import Meals from './pages/meals';
 
 import Meal_name from './pages/Meal_name';
 import Meal_ingredient from './pages/meal_ingredient';
-import Meal_Area from './pages/Meal_Area';
+import Meal_Letter from './pages/Meal_Letter';
 import Error from './pages/error';
 
 
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/meals" element={<Meals/>}/>
           <Route path="/meal_name" element={<Meal_name/>}/>
           <Route path="/meal_ingredient" element={<Meal_ingredient/>}/>
-          <Route path="/meal_area" element={<Meal_Area/>}/>
+          <Route path="/meal_letter" element={<Meal_Letter/>}/>
           <Route path="*" element={<Error/>}/>
         </Routes>
         </BrowserRouter>

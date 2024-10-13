@@ -8,6 +8,7 @@ function Ingredient() {
     const[meals, setMeals] =useState([]);
     const[searchitem, setSearchitem] = useState('');
    
+   
 
     const fetchmeals = async () => {
             
@@ -21,7 +22,7 @@ function Ingredient() {
         
        
     }
-
+ 
    
 
    
@@ -55,27 +56,29 @@ function Ingredient() {
         </div>
 </div>
 
-<div className=' flex flex-col justify-center items-center lg:px-32 px-5 mt-[10px]  '>
+<div className=' flex flex-col items-center justify-center my-12 mx-auto '>
     {meals && meals.length > 0 ? (
-       <div className= 'flex flex-wrap gap-8 justify-center'>
+       <div className= 'grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 max-w-screen-lg mx-auto'>
         {meals.map((meal, index) => (
-            <div key={index} className='w-full lg:w-1/4 p-5  shadow-[0_3px_10px_rgba(0,0,0,0.2)] rounded-lg'>
-                <img src={meal.strMealThumb} alt="img"  className='rounded-xl' sizes='50px'/>
-                <div className='space-y-4'>
-                <p className='font-bold  mt-0 pt-5 text-[15px]'>{meal.strMeal}</p>
-                </div>
-                
-                <p className='font-semibold  mt-[10px] text-[13px]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, illum. Quidem, ratione dolor. Dignissimos quas cumque distinctio perspiciatis illo natus a numquam sapiente. Tempora odit odio alias aperiam obcaecati aspernatur.</p>
-                
-                <div className='bg-[red] w-full mt-[10px] p-[6px] w-[100px] rounded-[5px] text-center'>
-                
-                <a href={meal.strYoutube} className='text-[13px] text-white '>Youtube</a>
-                </div>
+            <div key={index} className='max-w-xs max-auto max-w shadow-[0_3px_10px_rgba(0,0,0,0.2)]  rounded-md'>
+            <img src={meal.strMealThumb} alt="img"  className='rounded-xl w-full'/>
+            <div className='p-4'>
+            <h1 className='font-bold'>{meal.strMeal}</h1>
+            
+            
+            <p className='text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, fugit velit suscipit eius sunt labore doloremque maiores officia magni facilis provident accusantium sit deleniti distinctio ea mollitia necessitatibus eaque enim.</p>
+            
+           
+            <div className='mt-2'>
+            <a href={meal.strYoutube}  className='bg-[red]  text-md text-white p-2 rounded-full '>Youtube</a>
             </div>
+        </div>
+        </div>
         ))}
        </div>
     ) : (
-            <p className='text-center text-red-500  mt-[30px]'>There are no meals.</p>
+           <p className='text-[red]'>There are no meals</p>
+           
     )}
        </div>
     </div>

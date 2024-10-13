@@ -45,7 +45,7 @@ const closeMenu =() => {
                 </div>
                 <div className={`${menu ? "translate-x-0": "-translate-x-full"} lg:hidden flex flex-col  bg-black text-white left-0 top-20 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-full h-fit transition-transform duration-300 rounded-lg `}>
                 <Link to='home' spy={true} smooth={true} duration={500} className=' hover:text-brightColor transition-all cursor-pointer' onClick={closeMenu}>Home</Link>
-                        <Link to='dishes' spy={true} smooth={true} duration={500} className=' hover:text-brightColor transition-all  cursor-pointer' onClick={closeMenu}>Dishes</Link>
+                        <Link to='dishes' spy={true} smooth={true} duration={500} className=' hover:text-brightColor transition-all  cursor-pointer' onClick={closeMenu}>Meals</Link>
                         <Link to='about' spy={true} smooth={true} duration={500} className=' hover:text-brightColor transition-all  cursor-pointer' onClick={closeMenu}>About</Link>
                         <Link to='contact' spy={true} smooth={true} duration={500} className=' hover:text-brightColor transition-all  cursor-pointer' onClick={closeMenu}>contact</Link>
                 </div>
