@@ -40,7 +40,7 @@ function Letter() {
   return (
     <div className=' flex flex-col justify-center items-center lg:px-32 px-16' >
         
-      <div className='flex gap-3'>
+      <div className='flex gap-[3px] sm:gap-2 lg:gap-3'>
         {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter) => (
             <button key={letter} onClick={userinput}>{letter}</button>
         ))}
